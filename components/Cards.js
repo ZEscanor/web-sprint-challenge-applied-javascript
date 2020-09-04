@@ -31,7 +31,7 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
     for (var key in arrArray.articles) {
         console.log(arrArray.articles[key]) 
         const ok = arrArray.articles[key]
-        //once i geth the keys i use the for each loop to pass into my function
+        //once i get the keys i use the for each loop to pass into my function
         .forEach(item=>{
             plzWork(item)
             
@@ -70,5 +70,9 @@ function plzWork(objecB) {
 
     const letDoIt = document.querySelector(".cards-container")
     letDoIt.append(divMaker);
+    divMaker.addEventListener("click", function(event){
+       
+        console.log(objecB.headline);
+      });
     return letDoIt;
 }
